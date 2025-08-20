@@ -1,0 +1,53 @@
+/*Global*/
+
+*{
+    margin: 0;
+    font-family: Arial;
+}
+
+header{
+    text-transform: uppercase;
+    background-color: #151B22;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header p{
+    letter-spacing: 5px;
+    font-size: 26px;
+    font-weight: lighter;
+}
+
+header span{
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+footer{
+    background-color: #2E3A42;
+    text-align: center;
+    padding: 20px;
+    margin-top: 105px;
+    height: 10px;
+}
+
+img{
+    width: 10%;
+    height: auto;
+}
+
+
+.info{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+    background-color: #2E3B4A;
+    border-radius: 20px;
+    border: 5px solid #626C77;
+    
+}
+
+
