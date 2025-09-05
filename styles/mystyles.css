@@ -5,6 +5,15 @@
     font-family: Arial;
 }
 
+.container{
+    position: relative;
+    height: 295px;
+    width: 80%;
+    display: flex;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;       /* centra verticalmente */
+}
+
 header{
     text-transform: uppercase;
     background-color: #151B22;
@@ -29,7 +38,7 @@ footer{
     background-color: #2E3A42;
     text-align: center;
     padding: 20px;
-    margin-top: 105px;
+    transform: translateY(185px);
     height: 10px;
 }
 
@@ -38,16 +47,239 @@ img{
     height: auto;
 }
 
-
-.info{
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 15px;
+.base-rect{
+    height: 100vh;
+    width: 85%;
+    max-width: 1000px;
+    max-height: 400px;
     background-color: #2E3B4A;
-    border-radius: 20px;
+    border-radius: 50px;
     border: 5px solid #626C77;
-    
+    transform: translateX(190px) translateY(90px);
+}
+
+.main-rect{
+    position: absolute;
+    height: 100vh;
+    width: 80%;
+    max-height: 340px;
+    max-width: 800px;
+    background-color: #8492A2;
+    border-radius: 50px;
+    transform: translateX(30px) translateY(75px);
+    z-index: 2;
 }
 
 
+.circle{
+    width: 320px;
+    height: 320px;
+    z-index: 3;
+    background-color: #2E3B4A;
+    border-radius: 200px;
+    position: absolute;
+    transform: translateX(430px) translateY(100px);
+    overflow: hidden;
+}
+
+.Planet{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    position: absolute;
+    transform: translateX(10px) translateY(10px);
+}
+
+.boom{
+    display: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    position: absolute;
+    transform: translateX(10px) translateY(10px);
+}
+
+.info{
+    margin: 20px;
+}
+
+.info span{
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.cat{
+    color: #3A435E;
+}
+
+.cat:hover{
+    color: white;
+    background-color: #3A435E;
+    transition: 1s;
+}
+
+.color{
+    color: #5E3A3A;
+}
+
+.color:hover{
+    color: white;
+    background-color: #5E3A3A;
+    transition: 1s;
+}
+
+.info p{
+    padding: 5px;
+}
+
+.info-second{
+    display: flex;
+    width: 80%;
+}
+
+.img-second{
+    width: 850px;
+    height: 85px;
+    display: flex;
+    gap: 60px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+.img-second img{
+    border-radius: 20px;
+}
+
+img{
+    transition: transform 0.4s ease;
+    transform-origin: left center;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.img-second img:last-of-type{
+    margin-left: 50px;
+}
+
+.hobbies h4{
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.hobbies ol{
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.extra-rect a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: .8px;
+}
+
+.extra-rect{
+    width: 520px;
+    height: 40px;
+    z-index: 3;
+    background-color: #8492A2;
+    border-radius: 100px;
+    border: #2E3B4A 10px solid;
+    position: absolute;
+    display: flex;               
+    align-items: center;         
+    justify-content: center;     
+    transform: translateX(40px) translateY(250px);
+}
+
+.extra-rect span{
+    font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  header p, 
+  header span {
+    font-size: 1em;  
+    letter-spacing: 2px;
+  }
+
+  .info{
+    font-size: 12px; 
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 70%;
+    transform: translateY(-35px);
+  }
+
+  .base-rect {
+    width: 80%;
+    height: 60vh;
+    margin: 2%;
+  }
+
+  .main-rect {
+    width: 100%;
+    height: 60vh;
+    max-width: 500px;
+    margin: 0px auto;
+  }
+
+  .circle {
+    width: 28%;
+    height: 39vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(270px) translateY(90px);
+  }
+
+  .Planet{
+    display: none;
+  }
+
+  .boom{
+    display: flex;
+    height: auto;
+    width: 180px;
+    transition: transform 0.4s ease;
+    transform-origin: left center;
+  }
+
+  .boom:hover{
+    transform: scale(1.15);
+  }
+
+  .img-second {
+    flex-wrap: wrap;    
+    width: 100%;
+    gap: 10px;
+    margin: 10px auto;
+    justify-content: center;
+  }
+
+  .img-second img {
+    width: 20%;         
+    height: auto;
+  }
+
+  .extra-rect {
+    display: flex;
+    width: 65%;
+    font-size: 12px;
+    height: auto;
+    padding: 8px;
+    border: #2E3B4A 10px solid;
+    transform: translateY(229px) translateX(171px);
+  }
+
+  footer{
+    height: auto;
+    transform: translateY(102px);
+  }
+}
